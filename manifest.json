@@ -1,0 +1,31 @@
+{
+  "name": "coursera_dualsub",
+  "version": "1.0",
+  "description": "coursera中英双语字幕",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon_16.png",
+      "32": "images/icon_32.png",
+      "48": "images/icon_48.png",
+      "128": "images/icon_128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon_16.png",
+    "32": "images/icon_32.png",
+    "48": "images/icon_48.png",
+    "128": "images/icon_128.png"
+  },
+  "manifest_version": 2,
+  "content_scripts": 
+	[
+		{
+			"matches": ["https://www.coursera.org/*"],
+			"js": ["content_script.js"],
+			"run_at": "document_idle"
+		}
+  ],
+  "web_accessible_resources": ["inject.js"]
+}
