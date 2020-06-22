@@ -1,5 +1,3 @@
-alert(222222);
-
 function injectCustomJs(jsPath)
 {
 	jsPath = jsPath || 'inject.js';
